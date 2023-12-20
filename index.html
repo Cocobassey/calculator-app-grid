@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/CSS/style.css">
+  <link rel="stylesheet" type="text/css" href="">
+  <title> Calculator App </title>
+
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body>
+  <main class="calculator">
+      <div class="calc-header">
+        <h1>calc</h1>
+        <h6>THEME</h6>
+        <div class="theme-select">
+          <input id="theme1" type="radio" name="theme" value="0" checked>
+          <label for="theme1"> 1 </label>
+  
+          <input id="theme2" type="radio" name="theme" value="1">
+          <label for="theme2"> 2 </label>
+  
+          <input id="theme3" type="radio" name="theme" value="2">
+          <label for="theme3"> 3 </label>
+        </div>
+      </div>
+    <div class="display-screen">
+      <div id="prev-input" class="first-line"> </div>
+      <div id="result-input" class="second-line"> </div>
+    </div>
+    <div class="grid-container">
+      <button class="digit" value="7"> 7 </button>
+      <button class="digit" value="8"> 8 </button>
+      <button class="digit" value="9"> 9 </button>
+      <button class="del-btn" value="del"> DEL </button>
+      <button class="digit" value="4"> 4 </button>
+      <button class="digit" value="5"> 5 </button>
+      <button class="digit" value="6"> 6 </button>
+      <button class="operator" value="+"> + </button>
+      <button class="digit" value="1"> 1 </button>
+      <button class="digit" value="2"> 2 </button>
+      <button class="digit" value="3"> 3 </button>
+      <button class="operator" value="-"> - </button>
+      <button class="operator" value="."> . </button>
+      <button class="digit" value="0">0</button>
+      <button class="operator" value="/"> / </button>
+      <button class="operator" value="*"> * </button>
+      <!-- class reset-btn and equal-btn not in use -->
+      <button class="reset-btn column-span" value="reset"> RESET </button>  <!-- column-span class not used -->
+      <button class="equal-btn column-span" value="="> = </button>  <!-- column-span class not used -->
+    </div>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Cocobassey" target="_blank"> Cococodes </a>.
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
