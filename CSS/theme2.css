@@ -1,0 +1,64 @@
+/* Theme3 colours */
+:root {
+    /* Backgrounds */
+    --main-bg-theme: hsl(268, 75%, 9%);
+    --toggle_keypad_screen-bg: hsl(268, 71%, 12%);
+    /* Keys */
+    --key-bg: hsl(281, 89%, 26%);
+    --key-shadow: hsl(285, 91%, 52%);
+    --key-bg-toggle: hsl(176, 100%, 44%);
+    --cyan-key-shadow: hsl(177, 92%, 70%);
+    --dk-vio-key-bg: hsl(268, 47%, 21%);
+    --magenta-key-shadow: hsl(290, 70%, 36%);
+    /* Text */
+    --text-color: hsl(52, 100%, 62%);
+    --dk_blue-text: hsl(198, 20%, 13%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    background: var(--main-bg-theme);
+}
+
+label, h6 {
+    color: var(--text-color);
+}
+
+.calc-header > h1 {
+    color: var(--text-color);
+}
+
+.theme-select {
+    background: var(--toggle_keypad_screen-bg);
+}
+
+input:checked {
+    background: var(--key-bg-toggle);
+}
+
+.display-screen {
+    color: var(--text-color);
+    background: var(--toggle_keypad_screen-bg);
+}
+
+.grid-container {
+    background: var(--toggle_keypad_screen-bg);
+}
+
+.grid-container > button {
+    background: var(--dk-vio-key-bg);
+    color: var(--text-color);
+    box-shadow: 0 2px var(--magenta-key-shadow);
+}
+
+button:nth-child(4), button:nth-child(17) {
+    background: var(--key-bg);
+    color: var(--white);
+    box-shadow: 0 2px var(--key-shadow);
+}
+
+button:nth-child(18) {
+    background-color: var(--key-bg-toggle);
+    box-shadow: 0 5px var(--cyan-key-shadow);
+    color: var(--white);
+}

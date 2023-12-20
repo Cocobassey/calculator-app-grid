@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+*, *::before, *::after {
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+}
+
+ /* Theme1 colours */
+:root {
+    /* Backgrounds */
+    --main-bg-theme: hsl(222, 26%, 31%);
+    --toggle-keypad-bg: hsl(223, 31%, 20%);
+    --screen-bg: hsl(224, 36%, 15%);
+    /* Keys */
+    --key-bg: hsl(225, 21%, 49%);
+    --key-shadow: hsl(224, 28%, 35%);
+    --key-bg-toggle: hsl(6, 63%, 50%);
+    --red-key-shadow: hsl(6, 70%, 34%);
+    --lgt-key-bg: hsl(30, 25%, 89%);
+    --orange-key-shadow: hsl(28, 16%, 65%);
+    /* Text */
+    --text-color: hsl(221, 14%, 31%);
+    --white: hsl(0, 0%, 100%);
+}
+
+html {
+    font-size: 62.5%;
+  }
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    background: var(--main-bg-theme);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    font-size: 3.2rem;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50rem;
+    margin: auto;
+    border: 2px solid red;
+}
+
+.calc-header {
+    display: flex;
+    position: relative;
+    margin: 50px 0 20px;
+    border: 2px solid yellow;
+}
+
+.calc-header > h1 {
+    font-size: 3.2rem;
+    color: var(--lgt-key-bg);
+    position: absolute;
+    left: -150px;
+    top: -15px;
+    border: 2px solid pink;
+}
+
+.calc-header > h6 {
+    align-self: center;
+    border: 2px solid green;
+}
+
+.theme-select {
+    position: relative;
+    left: 150px;
+    height: 30px;
+    width: 8rem;
+    /* border-radius: 30px; */
+    background: var(--toggle-keypad-bg);
+    border: 2px solid burlywood;
+}
+
+[id="theme1"], [id="theme2"], [id="theme3"] {    /* #theme1, #theme2, #theme3 */
+    appearance: none;
+    position: absolute;
+    top: 4px;
+    width: 1.9rem;
+    height: 17px;
+    /* border-radius: 50px; */
+    transition: 0.5s;
+    border: 2px solid white;
+}
+
+#theme1 { 
+    left: 10px;
+}
+
+#theme2 {
+    left: 33px;
+}
+
+#theme3 {
+    left: 55px;
+}
+
+input:checked {
+    background: var(--key-bg-toggle);
+}
+
+label {
+    position: relative;
+    top: -40px;
+}
+
+label[for="theme1"] {
+    left: 7px;
+}
+
+label[for="theme2"] {
+    left: 10px;
+}
+
+label[for="theme3"] {
+    left: 10px;
+}
+
+.display-screen {
+    height: 80px;
+    width: 100%;
+    /* border-radius: 10px; */
+    margin-bottom: 15px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-right: 10px;
+    color: var(--white);
+    background: var(--screen-bg);
+    overflow: hidden;
+    border: 2px solid white;
+}
+
+.display-screen > first-line {
+    font-size: 1.5rem;
+}
+
+.grid-container {
+    display: grid;
+    justify-content: center;
+    gap: 1px;
+    /* align-items: center; */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 70px);
+    padding: 1px 1px;
+    width: 100%;
+    background: var(--toggle-keypad-bg);
+}
+
+
+button:active {
+    transform: translateY(0.5px);
+}
+
+.grid-container > button {
+    border: none;
+    padding: 10px 0;
+    font-size: 3.2rem;
+    font-weight: 700;
+    background: var(--lgt-key-bg);
+    color: var(--text-color);
+    box-shadow: 0 2px var(--orange-key-shadow);
+}
+
+.column-span {
+    grid-column: span 2;
+}
+
+ /* not useful for this css code, but an 
+ alternative to the grid-colunm usage */
+
+/* .reset-btn {
+    grid-column: 1/3;
+}
+
+.equal-btn {
+    grid-column: 3/-1;
+} */
+
+button:nth-child(4), button:nth-child(17) {
+    background: var(--key-bg);
+    color: var(--white);
+    box-shadow: 0 2px var(--key-shadow);
+    /* font-size: 22px; */
+    font-weight: inherit;
+    padding: 17px 0;
+}
+
+button:nth-child(18) {
+    background-color: var(--key-bg-toggle);
+    box-shadow: 0 5px var(--red-key-shadow);
+    color: var(--white);
+    font-weight: inherit;
+}
+
+button:nth-child(8),
+button:nth-child(12),
+button:nth-child(13),
+button:nth-child(15),
+button:nth-child(16) {
+    font-weight: inherit;
+    /* font-size: 22px; */
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
