@@ -18,7 +18,7 @@ function changeTheme(i) {
     if(i === "0") {
         links[2].setAttribute("href", "")
     } else {
-        links[2].setAttribute("href", `css/theme${i}.css`)
+        links[2].setAttribute("href", `CSS/theme${i}.css`)
     }
 }
 
